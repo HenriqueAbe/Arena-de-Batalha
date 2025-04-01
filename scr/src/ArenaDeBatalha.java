@@ -1,26 +1,25 @@
 import java.util.ArrayList;
 
 public class ArenaDeBatalha {
-    private static ArrayList<Personagem> personagens = new ArrayList<>();
-    private static ArrayList<Inimigo> inimigos = new ArrayList<>();
+    private static ArrayList<Personagem>personagens = new ArrayList<>();
+    private static ArrayList<Inimigo>inimigos = new ArrayList<>();
 
     public static void main(String[] args) {
-        Inimigo goblin = new Inimigo("Goblin", 8, 3, 3);
-        inimigos.add(goblin);
 
-        Inimigo mago = new Inimigo("Mago", 5, 8,1);
-        inimigos.add(mago);
 
-        Inimigo touro = new Inimigo("Touro", 14, 2, 7);
-        inimigos.add(touro);
+        personagens.add(new Personagem("Arqueiro", 5, 7, 2));
+        personagens.add(new Personagem("Espadachim", 2,5,2));
+        personagens.add(new Personagem("Escudeiro", 12,2,6));
 
-        Personagem escudeiro = new Personagem("Escudeiro", 15, 1, 10);
-        personagens.add(escudeiro);
 
-        Personagem arqueiro = new Personagem("Arqueiro", 5, 9, 0);
-        personagens.add(arqueiro);
+        inimigos.add(new Inimigo("Goblin", 7,3,3));
+        inimigos.add(new Inimigo("Esqueleto", 2,5,2));
+        inimigos.add(new Inimigo("Orc", 12,2,6));
 
-        Personagem espadachim = new Personagem("Espadachim", 8, 4, 2);
-        personagens.add(espadachim);
+
+        Batalha batalha = new Batalha(personagens, inimigos);
+        batalha.iniciarBatalha();
+
+
     }
 }
