@@ -43,7 +43,7 @@ public class Batalha {
             Personagem personagem = personagens.get(random.nextInt(personagens.size()));
             Inimigo inimigo = inimigos.get(random.nextInt(inimigos.size()));
 
-            System.out.println("\n----- Novo Turno -----");
+            System.out.println("----- Novo Turno -----");
 
             if (primeiroAtaque == 1) {
                 System.out.println(personagem.getNome() + " contra " + inimigo.getNome());

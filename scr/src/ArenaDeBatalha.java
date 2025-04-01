@@ -18,11 +18,7 @@ public class ArenaDeBatalha {
         inimigos.add(new Inimigo("Orc", 110,4,16));
         inimigos.add(new Inimigo("Glass cannon(inimigo)",10,60,0));
 
-
-
         Batalha batalha = new Batalha(personagens, inimigos);
         batalha.iniciarBatalha();
-
-
     }
 }
