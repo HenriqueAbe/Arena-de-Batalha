@@ -32,9 +32,11 @@ public class Batalha {
         System.out.println("Início da batalha!");
 
         if (primeiroAtaque == 1) {
-            System.out.println("Personagens atacam primeiro!");
+            System.out.print("Personagens atacam primeiro!\nPressione ENTER para continuar.");
+            scanner.nextLine();
         } else if (primeiroAtaque == 2) {
-            System.out.println("Inimigos atacam primeiro!");
+            System.out.print("Inimigos atacam primeiro!\nPressione ENTER para continuar.");
+            scanner.nextLine();
         }
 
         while (!personagens.isEmpty() && !inimigos.isEmpty()) {
@@ -42,18 +44,23 @@ public class Batalha {
             Inimigo inimigo = inimigos.get(random.nextInt(inimigos.size()));
 
             System.out.println("\n----- Novo Turno -----");
-            System.out.println(personagem.getNome() + " contra " + inimigo.getNome());
 
             if (primeiroAtaque == 1) {
+                System.out.println(personagem.getNome() + " contra " + inimigo.getNome());
                 atacarPersonagem(personagem, inimigo);
+                System.out.println("------------------------------------------------");
                 if (inimigo.estaVivo()) {
+                    System.out.println(inimigo.getNome() + " contra " + personagem.getNome());
                     atacarInimigo(inimigo, personagem);
                     System.out.print("Para ir para o próximo turno pressione ENTER.");
                     scanner.nextLine();
                 }
             } else if (primeiroAtaque == 2) {
+                System.out.println(inimigo.getNome() + " contra " + personagem.getNome());
                 atacarInimigo(inimigo,personagem);
+                System.out.println("------------------------------------------------");
                 if (personagem.estaVivo()) {
+                    System.out.println(personagem.getNome() + " contra " + inimigo.getNome());
                     atacarPersonagem(personagem, inimigo);
                     System.out.print("Para ir para o próximo turno pressione ENTER.");
                     scanner.nextLine();
@@ -74,7 +81,7 @@ public class Batalha {
             }
         }
 
-        System.out.println("\n=== Resultado Final ===");
+        System.out.println("=== Resultado Final ===");
         if (personagens.isEmpty()) {
             System.out.println("Inimigos venceram a batalha!");
         } else {

@@ -38,7 +38,13 @@ public class Inimigo {
             System.out.println("A defesa de " + this.nome + " reduziu o dano para 1!");
         }
         this.vida -= danoReal;
-        System.out.println(this.nome + " recebeu " + danoReal + " de dano!");
+        if (this.vida <= 0) {
+            System.out.println(this.nome + " recebeu " + danoReal + " de dano!");
+            System.out.println("Vida do(a) " + this.nome + ": 0.");
+        } else {
+            System.out.println(this.nome + " recebeu " + danoReal + " de dano!");
+            System.out.println("Vida do(a) " + this.nome + ": " + this.vida );
+        }
     }
 
     public boolean estaVivo() {
