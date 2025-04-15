@@ -6,7 +6,6 @@ public class ArenaDeBatalha {
 
     public static void main(String[] args) {
 
-
         personagens.add(new Personagem("Arqueiro", 33, 23, 4));
         personagens.add(new Personagem("Espadachim", 50,15,10));
         personagens.add(new Personagem("Escudeiro", 100,8,20));
@@ -17,7 +16,7 @@ public class ArenaDeBatalha {
         inimigos.add(new Inimigo("Esqueleto", 20,27,5));
         inimigos.add(new Inimigo("Orc", 110,4,16));
         inimigos.add(new Inimigo("Glass cannon(inimigo)",10,60,0));
-
+        System.out.println(personagens);
         Batalha batalha = new Batalha(personagens, inimigos);
         batalha.iniciarBatalha();
     }

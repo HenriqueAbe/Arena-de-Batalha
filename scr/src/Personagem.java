@@ -1,8 +1,4 @@
-public class Personagem {
-    private String nome;
-    private int vida;
-    private int dano;
-    private int defesa;
+public class Personagem extends  Pessoa{
 
     public Personagem(String nome, int vida, int dano, int defesa) {
         this.nome = nome;
@@ -13,22 +9,6 @@ public class Personagem {
 
     public String getNome() {
         return nome;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public int getDano() {
-        return dano;
-    }
-
-    public int getDefesa() {
-        return defesa;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
     }
 
     public int calcularDanoCausado() {
@@ -53,5 +33,9 @@ public class Personagem {
 
     public boolean estaVivo() {
         return this.vida > 0;
+    }
+
+    public String toString() {
+        return nome + " (Vida: " + vida + ", Ataque: " + dano + ", Defesa: " + defesa + ")";
     }
 }
