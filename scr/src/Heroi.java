@@ -1,9 +1,9 @@
-public class Inimigo extends Personagem {
-    private int nivelEscuridao;
+public class Heroi extends Personagem {
+    private int ranking;
 
-    public Inimigo(String nome, int vida, int dano, int defesa, int nivelEscuridao) {
+    public Heroi(String nome, int vida, int dano, int defesa, int ranking) {
         super(nome, vida, dano, defesa);
-        this.nivelEscuridao = nivelEscuridao;
+        this.ranking = ranking;
     }
 
     public int calcularDanoCausado() {
@@ -31,14 +31,9 @@ public class Inimigo extends Personagem {
     }
 
     public String toString() {
-        return getNome() + ": Ranking: " + nivelEscuridao;
+        return getNome() + ": Ranking: " + ranking;
 
     }
+
+
 }
-
-
-
-
-
-
-
